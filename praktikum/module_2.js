@@ -1,17 +1,25 @@
 var person = (function(){
     var age = 25
 
-    return{
-        name : 'Paimon',
-
-        getAge : function(){
-            return age
-        },
-
-        growOlder : function(){
-            age++
-        }
+    function setAge(newAge){
+        age = newAge
     }
+
+    function getAge(){
+        return age
+    }
+
+    function growOlder(){
+        age++
+    }
+
+    return {
+        name : 'Paimon',
+        setAge : setAge,
+        getAge : getAge,
+        growOlder : growOlder
+    }
+
 }())
 
 console.log('Nama Person\t: '+person.name)
